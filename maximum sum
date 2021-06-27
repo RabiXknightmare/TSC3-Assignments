@@ -1,0 +1,26 @@
+# TSC3-Assignments
+#include<iostream>
+using namespace std;
+ 
+int maxSubArraySum(int a[], int size)
+{
+   int maxf = a[0];
+   int cmax = a[0];
+ 
+   for (int i = 1; i < size; i++)
+   {
+        cmax = max(a[i], cmax+a[i]);
+        maxf = max(maxf, cmax);
+   }
+   return max_so_far;
+}
+ 
+
+int main()
+{
+   int a[] =  {1,2,3,-2,5};
+   int n = 5;
+   int max_sum = maxSubArraySum(a, n);
+   cout << "Maximum contiguous sum is " << max_sum;
+   return 0;
+}
